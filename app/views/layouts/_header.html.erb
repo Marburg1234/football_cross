@@ -1,0 +1,13 @@
+<header class="bg-secondary">
+  <nav class="header nav-bar bg-body-tertiary shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <div class="m-3">
+        <%= link_to "logo", root_path %>
+      </div>
+      <ul class="d-flex justify-content-between">
+        <%= link_to "新規登録", new_user_registration_path, class: 'm-3' %>
+        <%= link_to "ログイン", new_user_session_path, class: 'm-3' %>
+      </ul>
+    </div>
+  </nav>
+</header>
