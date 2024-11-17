@@ -1,1 +1,6 @@
 <h2>ユーザーのshowページ</h2>
+
+<p>プロフィール写真</p>
+<%= image_tag @user.get_profile_image, size: '100x100' %>
+<p>ユーザー名</p>
+<%= @user.nickname %>
