@@ -4,10 +4,17 @@
       <div class="m-3">
         <%= link_to "logo", root_path %>
       </div>
-      <ul class="d-flex justify-content-between">
-        <%= link_to "新規登録", new_user_registration_path, class: 'm-3' %>
-        <%= link_to "ログイン", new_user_session_path, class: 'm-3' %>
-      </ul>
+      <% if user_signed_in? %>
+        <ul class="d-flex justify-content-between">
+          <%= link_to "マイページ", mypage_users_path(current_user.id), class: 'm-3' %>
+          <%= link_to "ログアウト", destroy_user_session_path, class: 'm-3', data: { confirm: "本当にログアウトしますか？" } %>
+        </ul>
+      <% else %>
+        <ul class="d-flex justify-content-between">
+          <%= link_to "新規登録", new_user_registration_path, class: 'm-3' %>
+          <%= link_to "ログイン", new_user_session_path, class: 'm-3' %>
+        </ul>
+      <% end %>
     </div>
   </nav>
 </header>

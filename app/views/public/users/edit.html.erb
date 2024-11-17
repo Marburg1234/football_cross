@@ -1,0 +1,10 @@
+<h2>ユーザー情報編集ページ</h2>
+
+<%= form_with model: @user, local: true do |f| %>
+  <%= f.label :"ニックネーム", class: 'm-1' %>
+  <%= f.text_field :nickname, autofocus: true, class: 'form-control mb-3' %>
+  <%= f.label :"プロフィール写真", class: 'm-1' %><br />
+  <%= f.file_field :profile_image, accept: "image/*", class: 'mb-3' %>
+  <br />
+  <%= f.submit "保存する", class: 'btn btn-danger my-2' %>
+<% end %>

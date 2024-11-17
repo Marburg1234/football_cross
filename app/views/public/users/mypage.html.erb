@@ -1,0 +1,9 @@
+<h2>マイページ</h2>
+
+<h2>Profile</h2>
+<div>
+  <%= image_tag @user.get_profile_image, size: "100x100" %>
+  ユーザー名：<%= @user.nickname %>
+</div>
+<%= link_to "編集する", edit_user_path(current_user.id), class: 'btn btn-warning' %>
+
